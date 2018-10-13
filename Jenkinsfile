@@ -16,17 +16,12 @@ pipeline {
         sh 'npm install'
       }
     }
-    /*
     stage('Test') {
       steps {
-        sh 'mvn test'
-      }
-      post {
-        always { 
-          junit '** / *.xml'
-        }
+        sh './jenkins/scripts/test.sh'
       }
     }
+    /*
     stage('Deliver') {
       steps {
         sh 'jenkins/scripts/deliver.sh'
