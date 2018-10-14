@@ -10,6 +10,10 @@ pipeline {
       }
     }
   }
+  environment {
+    // For test.sh script benefit
+    CI = 'true'
+  }
   stages {
     stage('Build') {
       steps {
